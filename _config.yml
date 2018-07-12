@@ -2,7 +2,7 @@ title: Computational Chemistry
 description: Bond Geometry and 3D Modelling
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
 
 gems:
   - jekyll-mentions
