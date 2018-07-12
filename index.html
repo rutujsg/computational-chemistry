@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Computationalchemistry by rsgavank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Computationalchemistry</h1>
+      <h2 class="project-tagline">Computational Chemisitry Project</h2>
+      <a href="https://github.iu.edu/rsgavank/computationalChemistry" class="btn">View on GitHub</a>
+    </section>
+
+    <section class="main-content">
+      <hr>
+<p>author:</p>
+<ul>
+<li>Rutuj Gavankar
+date: 11 December 2017
+title: |
+Computational Chemistry -
+3D Modeling and Bond Geometry</li>
+</ul>
+<hr>
+<h1>
+<a id="project-summary" class="anchor" href="#project-summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Summary</h1>
+<p>This project uses an open-source file format called '.xyz', which is
+essentially a text file with the names and coordinates of atoms of a
+compound.</p>
+<p>The program reads this text file, coverts it into a multidimensional
+array, imports a CVS file that contains the periodic table and converts
+it into an array. It calculates the bond lengths, bond angles, molecular
+mass, and plots it in 3D space. It also generates a unique colour for
+each of the atoms.</p>
+<h1>
+<a id="use-case-analysis" class="anchor" href="#use-case-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use Case Analysis</h1>
+<p>This project is for people who would like to visualize chemical bonds.
+Covalent compounds have specific geometries depending on the number of
+lone pairs and the bonds. The bond length, bond angle, both depend on
+the electrostatic forces of attraction and repulsion.</p>
+<p>XYZ is an open source file format. Downloading a xyz file of the desired
+compound and loading it in the program, the molecule can be graphed in
+3d space and the molecular mass, atomic radii, bond length and bond
+angles can be calculated.</p>
+<h1>
+<a id="data-design" class="anchor" href="#data-design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Design</h1>
+<p>am using arrays for everything. The xyz text file is stored in a 2D
+array. The CVS file is stored in a 2D array as well. The program is
+divided into functions. Each function does one job and returns a value.
+There are also functions that show the values of other functions.</p>
+<p>I did not choose object oriented programming because it had no
+significant advantage over this approach. Infact, it would be twice as
+much tedious. All functions more or less depend on matrix manipulation.</p>
+<p>There is also a function to save the output as a txt file</p>
+<h1>
+<a id="ui-design" class="anchor" href="#ui-design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UI Design</h1>
+<p>I am using a Jupyter Notebook. The module I am using, VPython, doesn't
+work outside Jupyter. The first cell is just the code for people to view
+The second cell executes the 3d plot The third cell executes the math
+outputs The fourth cell asks for a save file prompt</p>
+<h1>
+<a id="algorithm" class="anchor" href="#algorithm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Algorithm</h1>
+<p>The XYZ file is imported into python using file functions. It is stored
+in a multidimensional array (2x2).The same is done to a CVS file with
+the periodic table.</p>
+<ol>
+<li>
+<p>Atomic Mass is calculated by adding up all the masses of individual
+atoms. The masses of atoms are found by comparing the periodic table
+cvs and the xyz file.</p>
+</li>
+<li>
+<p>Covalent Radius of an atom is displayed by using a similar method</p>
+</li>
+<li>
+<p>Bond length is calculated by calculating the distance between all
+the atoms, and then comparing each of them for finding the ones that
+bond.</p>
+</li>
+<li>
+<p>Bond Angles are found by converting each of the coordinates to a
+position vector. The difference between 3 position vectors gives 2
+vectors with 1 common point. Angle between these vectors is arc
+cosine of the dot product of them divided by product of their
+lengths. It is then converted to degrees.</p>
+</li>
+</ol>
+<h1>
+<a id="acknowledgment" class="anchor" href="#acknowledgment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgment</h1>
+<p>Modules:</p>
+<ul>
+<li>
+<p>SciPy : <a href="https://www.scipy.org/">https://www.scipy.org/</a></p>
+</li>
+<li>
+<p>Visual Python (VPython): <a href="http://www.vpython.org/">http://www.vpython.org/</a></p>
+</li>
+<li>
+<p>NumPy : <a href="http://www.numpy.org/">http://www.numpy.org/</a></p>
+</li>
+<li>
+<p>Jupyter : <a href="http://jupyter.org/">http://jupyter.org/</a></p>
+</li>
+</ul>
+<p>Files</p>
+<ul>
+<li>
+<p>periodicTable.cvs :
+<a href="https://github.com/andrejewski/periodic-table/blob/master/data.csv">https://github.com/andrejewski/periodic-table/blob/master/data.csv</a></p>
+</li>
+<li>
+<p>xyz files :
+<a href="https://github.com/tmpchem/computational%5C_chemistry/tree/master/geom/xyz">https://github.com/tmpchem/computational\_chemistry/tree/master/geom/xyz</a></p>
+</li>
+</ul>
+<p>Other Resources:</p>
+<ul>
+<li>
+<p><a href="https://cs.iupui.edu/%7Eaharris/230/">https://cs.iupui.edu/~aharris/230/</a></p>
+</li>
+<li>
+<p>Stewart, James. Calculus. Cengage Learning, 2016.</p>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.iu.edu/rsgavank/computationalChemistry">Computationalchemistry</a> is maintained by <a href="https://github.iu.edu/rsgavank">rsgavank</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
