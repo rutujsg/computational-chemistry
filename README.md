@@ -36,7 +36,7 @@ angles can be calculated.
 Data Design
 ===========
 
-am using arrays for everything. The xyz text file is stored in a 2D
+I am using arrays for everything. The xyz text file is stored in a 2D
 array. The CVS file is stored in a 2D array as well. The program is
 divided into functions. Each function does one job and returns a value.
 There are also functions that show the values of other functions.
