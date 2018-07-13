@@ -28,7 +28,7 @@ Covalent compounds have specific geometries depending on the number of
 lone pairs and the bonds. The bond length, bond angle, both depend on
 the electrostatic forces of attraction and repulsion.
 
-XYZ is an open source file format. Downloading a xyz file of the desired
+XYZ is an open source file format. Downloading a .xyz file of the desired
 compound and loading it in the program, the molecule can be graphed in
 3d space and the molecular mass, atomic radii, bond length and bond
 angles can be calculated.
@@ -45,14 +45,14 @@ I did not choose object oriented programming because it had no
 significant advantage over this approach. Infact, it would be twice as
 much tedious. All functions more or less depend on matrix manipulation.
 
-There is also a function to save the output as a txt file
+There is also a function to save the output as a .txt file
 
 UI Design
 =========
 
 I am using a Jupyter Notebook. The module I am using, VPython, doesn't
 work outside Jupyter. The first cell is just the code for people to view
-The second cell executes the 3d plot The third cell executes the math
+The second cell executes the 3D plot The third cell executes the math
 outputs The fourth cell asks for a save file prompt
 
 Algorithm
@@ -65,7 +65,7 @@ the periodic table.
 1.  Atomic Mass is calculated by adding up all the masses of individual
     atoms. The masses of atoms are found by comparing the periodic table
     cvs and the xyz file.
-
+    
 2.  Covalent Radius of an atom is displayed by using a similar method
 
 3.  Bond length is calculated by calculating the distance between all
@@ -96,7 +96,7 @@ Files
 -   periodicTable.cvs :
     https://github.com/andrejewski/periodic-table/blob/master/data.csv
 
--   xyz files :
+-   XYZ files :
     https://github.com/tmpchem/computational\_chemistry/tree/master/geom/xyz
 
 Other Resources:
